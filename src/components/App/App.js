@@ -5,7 +5,13 @@ import { pageContents, listData } from '../../data/dataStore';
 
 
 class App extends React.Component {
+  static propTypes = {
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
+  }
+  
   render() {
+    const {title, subtitle} = this.props;
     return (
 
       <main className={styles.component}>
