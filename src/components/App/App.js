@@ -4,6 +4,7 @@ import styles from './App.scss';
 import { pageContents, listData } from '../../data/dataStore';
 
 
+
 class App extends React.Component {
   static propTypes = {
     title: PropTypes.node,
