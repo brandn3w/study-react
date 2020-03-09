@@ -1,17 +1,14 @@
-
-import React from 'react';
-import styles from './Column.scss';
-import PropTypes from 'prop-types';
-import Card from '../Card/Card.js';
+import React from "react";
+import styles from "./Column.scss";
+import PropTypes from "prop-types";
+import Card from "../Card/Card.js";
 // import Creator from '../Creator/Creator.js';
-import { settings } from '../../data/dataStore';
-import Icon from '../Icon/Icon.js';
-import ReactHtmlParser from 'react-html-parser';
-import Creator from '../Creator/Creator.js';
+import { settings } from "../../data/dataStore";
+import Icon from "../Icon/Icon.js";
+import ReactHtmlParser from "react-html-parser";
+import Creator from "../Creator/Creator.js";
 
 class Column extends React.Component {
-
- 
   static propTypes = {
     cardTitle: PropTypes.string,
     cards: PropTypes.array,
@@ -19,32 +16,30 @@ class Column extends React.Component {
     name: PropTypes.node,
     title: PropTypes.node,
     cards: PropTypes.array,
-    addCard: PropTypes.func,
-  }
+    addCard: PropTypes.func
+  };
   static defaultProps = {
-    icon: settings.defaultColumnIcon,
-  }
-
-
+    icon: settings.defaultColumnIcon
+  };
 
   render() {
-    const {title, icon, cards, addCard} = this.props;
+    const { title, icon, cards, addCard } = this.props;
 
     return (
-  
-   <section className={styles.component}> 
-        <h3 className={styles.title}>{title}
+      <section className={styles.component}>
+        <h3 className={styles.title}>
+          {title}
           <span className={styles.icon}>
             <Icon name={icon} />
-    </span> 
+          </span>
         </h3>
-         <div className={styles.cards}>
-         {cards.map(cardData => (
+        <div className={styles.cards}>
+          {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-       <div className={styles.creator}>
-      <Creator text={settings.cardCreatorText} action={addCard} />
+        <div className={styles.creator}>
+          <Creator text={settings.cardCreatorText} action={addCard} />
         </div>
       </section>
     );
