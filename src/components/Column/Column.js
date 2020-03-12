@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Column.scss";
 import PropTypes from "prop-types";
 import Card from "../Card/Card.js";
-// import Creator from '../Creator/Creator.js';
+//import Creator from '../Creator/Creator.js';
 import { settings } from "../../data/dataStore";
 import Icon from "../Icon/Icon.js";
 import ReactHtmlParser from "react-html-parser";
