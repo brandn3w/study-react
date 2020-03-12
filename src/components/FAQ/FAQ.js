@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../Container/Container';
 import Hero from "../Hero/Hero.js";
-import {faqContents} from '../..data/dataStore';
+import {faqContents} from '../../data/dataStore';
 
 
 const FAQ =()=> (
