@@ -1,3 +1,4 @@
+  
 @import '../../styles/settings.scss';
 
 .component {
@@ -6,7 +7,6 @@
   color: $color-dark;
 
   input {
-    // flex-grow: 1;
     background: $color-light;
     border: 1px solid lighten($color-dark, 60%);
     padding: $base-size ($base-size * 1.5);

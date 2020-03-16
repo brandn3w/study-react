@@ -97,6 +97,19 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+  title: 'Things to do <sup>later</sup>',
+  description: 'More interesting things to do...',
+  image: 'https://cdn.pixabay.com/photo/2020/03/09/17/33/roots-4916519_960_720.jpg',
+
+  },
+  {
+  id: 'list-3',
+  title: 'Places to visit',
+  description: 'Places I want to see in the future',
+  image: 'https://cdn.pixabay.com/photo/2016/09/15/01/57/chiang-mai-1670926_960_720.jpg'
+  }
 ];
 
 const columns = [
