@@ -14,7 +14,7 @@ import SearchResult from '../Search/SearchResultsContainer';
 const App = () => (
   <BrowserRouter>
     <MainLayout>
-      <AnimatedSwitch>
+      <AnimatedSwitch
       atEnter={{ opacity: 0 }}
       atLeave={{ opacity: 0 }}
       atActive={{ opacity: 1 }}
