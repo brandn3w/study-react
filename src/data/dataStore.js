@@ -11,12 +11,14 @@ export const settings = {
     icon: 'search',
   },
 
-  header: {
-    icon: 'starfighter',
-  },
-
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  navMenu: {
+    logoIcon: 'cat',
+    homeHeader: 'Home',
+    infoHeader: 'Info',
+    FAQHeader: 'FAQ',
+  },
 };
 
 export const pageContents = {

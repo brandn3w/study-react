@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import styles from '../Header/Header';
+import styles from '../Header/Header.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon'
 import { settings } from '../../data/dataStore';
@@ -9,23 +9,30 @@ import ReactHtmlParser from 'react-html-parser';
 import Search from '../Search/Search';
 
 
+
 class Header extends React.Component {
 
+    static defaultProps ={
+        logoIcon: settings.navMenu.logoIcon,
+        homeHeader: settings.navMenu.homeHeader,
+        infoHeader: settings.navMenu.infoHeader,
+        FAQHeader: settings.navMenu.FAQHeader,
+    }
 
     render() {
-        const { icon } = settings.header;
+        const {logoIcon, homeHeader, infoHeader, FAQHeader} = this.props;
         return (
             <header className={styles.component}>
                 <Container>
                     <div className={styles.wrapper}>
-                        <Link to='/' className={StyleSheetList.logo}>
-                            <Icon name={icon} />
+                        <Link to='/' className={styles.logo}>
+                            <Icon name={logoIcon} />                         
                         </Link>
                         <Search />
                         <nav>
-                            <NavLink exact to='/' activeClassName='active'>Home</NavLink>
-                            <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
-                            <NavLink exact to='/faq' activeClassName='active'>FAQ</NavLink>
+                            <NavLink exact to='/' activeClassName='active'>{ReactHtmlParser(homeHeader)}</NavLink>
+                            <NavLink exact to='/info' activeClassName='active'>{ReactHtmlParser(infoHeader)}</NavLink>
+                            <NavLink exact to='/faq' activeClassName='active'>{ReactHtmlParser(FAQHeader)}</NavLink>
                         </nav>
 
                     </div>
